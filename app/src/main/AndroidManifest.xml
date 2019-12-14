@@ -9,9 +9,8 @@
     <uses-permission android:name="android.permission.DIAGNOSTIC" />
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_settings"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
 
         <uses-library android:name="android.hidl.manager.V1_0" android:required="false" />
@@ -39,7 +38,7 @@
             <meta-data android:name="com.android.settings.category" android:value="com.android.settings.category.ia.homepage"/>
             <meta-data android:name="com.android.settings.summary" android:resource="@string/desc_activity_top_level"/>
             <meta-data android:name="com.android.settings.title" android:resource="@string/title_activity_top_level"/>
-            <meta-data android:name="com.android.settings.icon" android:resource="@mipmap/ic_launcher_round"/>
+            <meta-data android:name="com.android.settings.icon" android:resource="@drawable/ic_settings"/>
             <meta-data android:name="com.android.settings.order" android:value="-190"/>
         </activity-alias>
 
