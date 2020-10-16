@@ -125,6 +125,11 @@
             android:key="key_misc_cgroup_freezer"
             android:title="Enable cgroup freezer"
             android:summary="Can help for RAM saving" />
+		<CheckBoxPreference
+            android:defaultValue="false"
+            android:key="key_misc_superuser"
+            android:title="SuperUser"
+            android:summary="Enable su and superuser root\n(no SafetyNet if enabled)" />
 		<Preference android:title="Securize"
             android:key="key_misc_securize" />
 		<Preference android:title="@string/remove_telephony_subsystem"
