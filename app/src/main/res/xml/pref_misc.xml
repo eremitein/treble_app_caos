@@ -127,6 +127,11 @@
             android:summary="Can help for RAM saving" />
 		<CheckBoxPreference
             android:defaultValue="false"
+            android:key="key_misc_superuser"
+            android:title="SuperUser"
+            android:summary="Enable su and superuser root\n(no SafetyNet if enabled)" />
+		<CheckBoxPreference
+            android:defaultValue="false"
             android:key="key_misc_restart_ril"
             android:title="Automatically restart RIL" />
 		<Preference android:title="Securize"

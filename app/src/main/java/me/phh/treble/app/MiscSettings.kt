@@ -24,6 +24,7 @@ object MiscSettings : Settings {
     val navbarInverse = "key_misc_navbar_inverse"
     val bluetooth = "key_misc_bluetooth"
     val securize = "key_misc_securize"
+    val superUser = "key_misc_superuser"
     val removeTelephony = "key_misc_removetelephony"
     val remotectl = "key_misc_remotectl"
     val disableAudioEffects = "key_misc_disable_audio_effects"
