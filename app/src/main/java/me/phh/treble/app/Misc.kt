@@ -132,6 +132,10 @@ object Misc: EntryStartup {
                 val value = sp.getBoolean(key, false)
                 SystemProperties.set("persist.sys.phh.mainkeys", if (value) "1" else "0")
             }
+            MiscSettings.navbarInverse -> {
+                val value = sp.getBoolean(key, false)
+                SystemProperties.set("persist.sys.navbar.inverse", if (value) "true" else "false")
+            }
             MiscSettings.bluetooth -> {
                 val value = sp.getString(key, "none")
                 android.util.Log.d("PHH", "Setting bluetooth workaround to $value")
@@ -196,6 +200,7 @@ object Misc: EntryStartup {
         spListener.onSharedPreferenceChanged(sp, MiscSettings.mobileSignal)
         spListener.onSharedPreferenceChanged(sp, MiscSettings.maxAspectRatioPreO)
         spListener.onSharedPreferenceChanged(sp, MiscSettings.multiCameras)
+        spListener.onSharedPreferenceChanged(sp, MiscSettings.navbarInverse)
         spListener.onSharedPreferenceChanged(sp, MiscSettings.forceCamera2APIHAL3)
         if (! sp.contains(MiscSettings.headsetFix))
             sp.edit().putBoolean(MiscSettings.headsetFix, HuaweiSettings.enabled()).commit()

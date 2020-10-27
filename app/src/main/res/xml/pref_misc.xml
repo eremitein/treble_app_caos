@@ -102,6 +102,11 @@
             android:defaultValue="false"
             android:key="key_misc_force_navbar_off"
             android:title="Force navigation bar disabled" />
+		<CheckBoxPreference
+            android:defaultValue="false"
+            android:key="key_misc_navbar_inverse"
+            android:title="Navigation bar inverse"
+            android:summary="Requires navbar mode re-select" />
 		<Preference android:title="Securize"
                 android:key="key_misc_securize" />
 	<Preference android:title="@string/remove_telephony_subsystem"
