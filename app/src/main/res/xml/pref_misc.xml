@@ -112,6 +112,11 @@
             android:title="Force navigation bar disabled" />
 		<CheckBoxPreference
             android:defaultValue="false"
+            android:key="key_misc_navbar_inverse"
+            android:title="Navigation bar inverse"
+            android:summary="Requires navbar mode re-select" />
+		<CheckBoxPreference
+            android:defaultValue="false"
             android:key="key_misc_storage_fuse"
             android:title="Disable FUSE storage layer"
             android:summary="This can (de/in)crease storage speed\nRestart required" />
