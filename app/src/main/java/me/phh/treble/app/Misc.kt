@@ -191,6 +191,11 @@ object Misc: EntryStartup {
                 Log.d("PHH", "Setting storageFUSE to $value")
                 SystemProperties.set("persist.sys.fflag.override.settings_fuse", if (!value) "true" else "false")
             }
+            MiscSettings.cgroupFreezer -> {
+                val value = sp.getBoolean(key, false)
+                Log.d("PHH", "Setting cgroupFreezer to $value")
+                SystemProperties.set("persist.device_config.use_cgroup_freezer", if (value) "true" else "false")
+            }
             MiscSettings.backlightScale -> {
                 val value = sp.getBoolean(key, false)
                 SystemProperties.set("persist.sys.phh.backlight.scale", if (value) "1" else "0")
@@ -225,5 +230,6 @@ object Misc: EntryStartup {
         spListener.onSharedPreferenceChanged(sp, MiscSettings.displayFps)
         spListener.onSharedPreferenceChanged(sp, MiscSettings.noHwcomposer)
         spListener.onSharedPreferenceChanged(sp, MiscSettings.storageFUSE)
+        spListener.onSharedPreferenceChanged(sp, MiscSettings.cgroupFreezer)
     }
 }
