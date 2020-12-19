@@ -111,7 +111,7 @@
             android:key="key_misc_force_navbar_off"
             android:title="Force navigation bar disabled" />
 		<CheckBoxPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="key_misc_storage_fuse"
             android:title="Disable FUSE storage layer"
             android:summary="This can (de/in)crease storage speed\nRestart required" />
