@@ -6,4 +6,6 @@
     <string name="remove_telephony_subsystem">Remove Telephony Subsystem</string>
     <string name="remove_root">Remove Root</string>
     <string name="continue_question">Continue?</string>
+    <string name="add_secure_file">Add secure file</string>
+    <string name="add_secure_file_summary">May help to pass SafetyNet (for not all devices)\nRestart required</string>
 </resources>

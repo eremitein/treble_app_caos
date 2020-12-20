@@ -33,6 +33,7 @@ object MiscSettings : Settings {
     val noHwcomposer = "key_misc_no_hwcomposer"
     val storageFUSE = "key_misc_storage_fuse"
     val cgroupFreezer = "key_misc_cgroup_freezer"
+    val addSecure = "key_misc_add_secure"
     val backlightScale = "key_misc_backlight_scale"
     val headsetDevinput = "key_misc_headset_devinput"
 
@@ -90,6 +91,37 @@ class MiscSettingsFragment : SettingsFragment() {
                         "/sbin/su 0 /system/bin/remove-telephony.sh",
                         "/system/xbin/su 0 /system/bin/remove-telephony.sh",
                         "/system/xbin/phh-su 0 /system/bin/remove-telephony.sh"
+                )
+                for(cmd in cmds) {
+                    try {
+                        Runtime.getRuntime().exec(cmd).waitFor()
+                    } catch(t: Throwable) {}
+                }
+            }
+
+            builder.setNegativeButton(android.R.string.no) { dialog, which ->
+            }
+
+            builder.show()
+            return@setOnPreferenceClickListener true
+        }
+
+        val addSecurePref = findPreference<Preference>(MiscSettings.addSecure)
+        addSecurePref!!.setOnPreferenceClickListener {
+
+            val builder = AlertDialog.Builder( this.getActivity() )
+            builder.setTitle(getString(R.string.add_secure_file))
+            builder.setMessage(getString(R.string.continue_question))
+
+            builder.setPositiveButton(android.R.string.yes) { dialog, which ->
+
+                var cmds = listOf(
+                        "/sbin/su -c /system/bin/phh-add-secure.sh",
+                        "/system/xbin/su -c /system/bin/phh-add-secure.sh",
+                        "/system/xbin/phh-su -c /system/bin/phh-add-secure.sh",
+                        "/sbin/su 0 /system/bin/phh-add-secure.sh",
+                        "/system/xbin/su 0 /system/bin/phh-add-secure.sh",
+                        "/system/xbin/phh-su 0 /system/bin/phh-add-secure.sh"
                 )
                 for(cmd in cmds) {
                     try {
