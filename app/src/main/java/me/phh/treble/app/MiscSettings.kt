@@ -25,6 +25,7 @@ object MiscSettings : Settings {
     val bluetooth = "key_misc_bluetooth"
     val superUser = "key_misc_superuser"
     val safetyNet = "key_misc_safetynet"
+    val autoRun = "key_misc_autorun"
     val removeTelephony = "key_misc_removetelephony"
     val remotectl = "key_misc_remotectl"
     val disableAudioEffects = "key_misc_disable_audio_effects"

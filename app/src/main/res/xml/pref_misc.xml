@@ -137,6 +137,11 @@
             android:summary="Can help to pass SafetyNet\n(not for all devices)" />
 		<CheckBoxPreference
             android:defaultValue="false"
+            android:key="key_misc_autorun"
+            android:title="AutoRun"
+            android:summary="Run custom commands from /sdcard/phh/run file" />
+		<CheckBoxPreference
+            android:defaultValue="false"
             android:key="key_misc_restart_ril"
             android:title="Automatically restart RIL" />
 		<Preference android:title="@string/remove_telephony_subsystem"

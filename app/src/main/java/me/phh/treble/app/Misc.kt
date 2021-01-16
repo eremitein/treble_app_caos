@@ -182,6 +182,10 @@ object Misc: EntryStartup {
                 val value = sp.getBoolean(key, false)
                 SystemProperties.set("persist.sys.phh.safetynet", if (value) "true" else "false")
             }
+            MiscSettings.autoRun -> {
+                val value = sp.getBoolean(key, false)
+                SystemProperties.set("persist.sys.phh.autorun", if (value) "true" else "false")
+            }
             MiscSettings.remotectl -> {
                 val value = sp.getBoolean(key, false)
                 SystemProperties.set("persist.sys.phh.remote", if (value) "true" else "false")
@@ -242,6 +246,7 @@ object Misc: EntryStartup {
             sp.edit().putBoolean(MiscSettings.headsetFix, HuaweiSettings.enabled()).commit()
         spListener.onSharedPreferenceChanged(sp, MiscSettings.superUser)
         spListener.onSharedPreferenceChanged(sp, MiscSettings.safetyNet)
+        spListener.onSharedPreferenceChanged(sp, MiscSettings.autoRun)
         spListener.onSharedPreferenceChanged(sp, MiscSettings.headsetFix)
         spListener.onSharedPreferenceChanged(sp, MiscSettings.bluetooth)
         spListener.onSharedPreferenceChanged(sp, MiscSettings.displayFps)
