@@ -251,7 +251,5 @@ object Misc: EntryStartup {
         spListener.onSharedPreferenceChanged(sp, MiscSettings.bluetooth)
         spListener.onSharedPreferenceChanged(sp, MiscSettings.displayFps)
         spListener.onSharedPreferenceChanged(sp, MiscSettings.noHwcomposer)
-        spListener.onSharedPreferenceChanged(sp, MiscSettings.storageFUSE)
-        spListener.onSharedPreferenceChanged(sp, MiscSettings.cgroupFreezer)
     }
 }
