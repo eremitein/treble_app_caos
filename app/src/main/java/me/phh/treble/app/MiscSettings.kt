@@ -26,6 +26,7 @@ object MiscSettings : Settings {
     val superUser = "key_misc_superuser"
     val safetyNet = "key_misc_safetynet"
     val autoRun = "key_misc_autorun"
+    val noLog = "key_misc_nolog"
     val removeTelephony = "key_misc_removetelephony"
     val remotectl = "key_misc_remotectl"
     val disableAudioEffects = "key_misc_disable_audio_effects"
