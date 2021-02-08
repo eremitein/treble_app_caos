@@ -190,6 +190,10 @@ object Misc: EntryStartup {
                 val value = sp.getBoolean(key, false)
                 SystemProperties.set("persist.sys.phh.nolog", if (value) "true" else "false")
             }
+            MiscSettings.autoBright -> {
+                val value = sp.getBoolean(key, false)
+                SystemProperties.set("persist.sys.overlay.autobright", if (value) "true" else "false")
+            }
             MiscSettings.remotectl -> {
                 val value = sp.getBoolean(key, false)
                 SystemProperties.set("persist.sys.phh.remote", if (value) "true" else "false")

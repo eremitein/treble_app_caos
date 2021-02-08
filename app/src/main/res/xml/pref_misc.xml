@@ -71,6 +71,10 @@
             android:defaultValue="false"
             android:key="key_misc_backlight_scale"
             android:title="Force alternative backlight scale" />
+		<CheckBoxPreference
+            android:defaultValue="false"
+            android:key="key_misc_autobright"
+            android:title="Enable autobrightness overlay" />
 	</PreferenceCategory>
 	<PreferenceCategory android:title="Camera">
 		<CheckBoxPreference
