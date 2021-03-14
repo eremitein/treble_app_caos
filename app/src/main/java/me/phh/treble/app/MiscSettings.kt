@@ -25,6 +25,7 @@ object MiscSettings : Settings {
     val bluetooth = "key_misc_bluetooth"
     val superUser = "key_misc_superuser"
     val safetyNet = "key_misc_safetynet"
+    val pixelProps = "key_misc_pixelprops"
     val autoRun = "key_misc_autorun"
     val noLog = "key_misc_nolog"
     val autoBright = "key_misc_autobright"
