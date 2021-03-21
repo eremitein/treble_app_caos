@@ -28,6 +28,7 @@ object MiscSettings : Settings {
     val pixelProps = "key_misc_pixelprops"
     val autoRun = "key_misc_autorun"
     val noLog = "key_misc_nolog"
+    val noVendor = "key_misc_novendor"
     val autoBright = "key_misc_autobright"
     val removeTelephony = "key_misc_removetelephony"
     val remotectl = "key_misc_remotectl"
