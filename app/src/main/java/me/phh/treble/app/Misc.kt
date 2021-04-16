@@ -196,7 +196,7 @@ object Misc: EntryStartup {
             }
             MiscSettings.noVendor -> {
                 val value = sp.getBoolean(key, false)
-                SystemProperties.set("persist.sys.phh.no_vendor_overlay", if (value) "true" else "false")
+                SystemProperties.set("persist.sys.phh.no_stock_apps", if (value) "true" else "false")
             }
             MiscSettings.autoBright -> {
                 val value = sp.getBoolean(key, false)
