@@ -134,7 +134,7 @@
             android:defaultValue="false"
             android:key="key_misc_storage_fuse"
             android:title="Disable FUSE storage layer"
-            android:summary="This can (de/in)crease storage speed\nRequires a reboot" />
+            android:summary="This can (or not) fix storage issues\nRequires a reboot" />
 		<CheckBoxPreference
             android:defaultValue="false"
             android:key="key_misc_cgroup_freezer"
@@ -154,17 +154,17 @@
             android:defaultValue="false"
             android:key="key_misc_pixelprops"
             android:title="Spoof Pixel 5"
-            android:summary="Disable SafetyNet option first!\nRequires a reboot" />
+            android:summary="Enable SafetyNet option first!\nRequires a reboot" />
 		<CheckBoxPreference
             android:defaultValue="false"
             android:key="key_misc_autorun"
             android:title="AutoRun"
-            android:summary="Run custom commands from /sdcard/phh/run file" />
+            android:summary="Run custom commands from /data/adb/phh/run file" />
 		<CheckBoxPreference
             android:defaultValue="false"
             android:key="key_misc_novendor"
             android:title="Disable stock overlays &amp; apps"
-            android:summary="Mask /{vendor,odm}/{overlay,app} content" />
+            android:summary="Mask /{vendor,odm}/{overlay,app} content\nRequires a reboot" />
 		<CheckBoxPreference
             android:defaultValue="false"
             android:key="key_misc_restart_ril"
