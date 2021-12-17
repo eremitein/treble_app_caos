@@ -210,6 +210,10 @@ object Misc: EntryStartup {
                 val value = sp.getBoolean(key, false)
                 SystemProperties.set("persist.sys.phh.no_stock_apps", if (value) "true" else "false")
             }
+            MiscSettings.noCutout -> {
+                val value = sp.getBoolean(key, false)
+                SystemProperties.set("persist.sys.phh.no_cutout", if (value) "true" else "false")
+            }
             MiscSettings.remotectl -> {
                 val value = sp.getBoolean(key, false)
                 SystemProperties.set("persist.sys.phh.remote", if (value) "true" else "false")
