@@ -79,10 +79,6 @@
             android:title="Force alternative backlight scale" />
 		<CheckBoxPreference
             android:defaultValue="false"
-            android:key="key_misc_autobright"
-            android:title="Enable autobrightness overlay" />
-		<CheckBoxPreference
-            android:defaultValue="false"
             android:key="key_misc_minimal_brightness"
             android:title="Allows setting brightness to the lowest possible" />
 	</PreferenceCategory>
