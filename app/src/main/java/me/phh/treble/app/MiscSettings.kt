@@ -30,6 +30,7 @@ object MiscSettings : Settings {
     val noLog = "key_misc_nolog"
     val noVendor = "key_misc_novendor"
     val noCutout = "key_misc_nocutout"
+    val enableSeedvault = "key_misc_seedvault"
     val removeTelephony = "key_misc_removetelephony"
     val remotectl = "key_misc_remotectl"
     val disableAudioEffects = "key_misc_disable_audio_effects"

@@ -248,6 +248,20 @@ object Misc: EntryStartup {
                 val value = sp.getBoolean(key, false)
                 SystemProperties.set("persist.sys.overlay.devinputjack", if (value) "true" else "false")
             }
+            MiscSettings.enableSeedvault -> {
+                val value = sp.getBoolean(key, false)
+                if (value) {
+                    try {
+                        Runtime.getRuntime().exec("bmgr enable true").waitFor()
+                        Runtime.getRuntime().exec("bmgr transport com.stevesoltys.seedvault.transport.ConfigurableBackupTransport").waitFor()
+                    } catch(t: Throwable) {}
+                } else {
+                    try {
+                        Runtime.getRuntime().exec("bmgr enable false").waitFor()
+                        Runtime.getRuntime().exec("bmgr transport com.android.localtransport/.LocalTransport").waitFor()
+                    } catch(t: Throwable) {}
+                }
+            }
             MiscSettings.restartRil -> {
                 val value = sp.getBoolean(key, false)
                 SystemProperties.set("persist.sys.phh.restart_ril", if (value) "true" else "false")
