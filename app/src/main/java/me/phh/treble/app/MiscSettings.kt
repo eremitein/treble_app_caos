@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.app.Application
 import android.hardware.display.DisplayManager
 import android.os.Bundle
+import android.os.SystemProperties
 import android.util.Log
 import androidx.preference.ListPreference
 import androidx.preference.Preference
@@ -45,6 +46,7 @@ object MiscSettings : Settings {
     val minimalBrightness = "key_misc_minimal_brightness"
     val aod = "key_misc_aod"
     val dt2w = "key_misc_dt2w"
+    val restartSystemUI = "key_misc_restart_systemui"
 
     override fun enabled() = true
 }
@@ -104,5 +106,11 @@ class MiscSettingsFragment : SettingsFragment() {
 
         fpsPref.setEntries(fpsEntries.toTypedArray())
         fpsPref.setEntryValues(fpsValues.toTypedArray())
+
+        val restartSystemUIPref = findPreference<Preference>(MiscSettings.restartSystemUI)
+        restartSystemUIPref!!.setOnPreferenceClickListener {
+            SystemProperties.set("sys.phh.restart_sysui", "true")
+            return@setOnPreferenceClickListener true
+        }
     }
 }
