@@ -182,13 +182,6 @@
 		<Preference android:title="@string/remove_telephony_subsystem"
             android:key="key_misc_removetelephony" />
 	</PreferenceCategory>
-	<PreferenceCategory android:title="Backup">
-		<CheckBoxPreference
-            android:defaultValue="false"
-            android:key="key_misc_seedvault"
-            android:title="Enable Seedvault backup"
-            android:summary="Requires a reboot" />
-	</PreferenceCategory>
 	<PreferenceCategory android:title="Debugging">
         <Preference android:title="Debug Sensors">
             <intent
